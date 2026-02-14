@@ -4,14 +4,20 @@ package edu.unl.cc;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        Libro libro1 = new Libro(12, "Heroes del Cenepa", "Alexander Gallo", 67.80);
+        Libro libro2 = new Libro(2, "Pedro Picapiedras", "Juan Pablo", 67.80);
+        GestorBiblioteca gestorBiblioteca = new GestorBiblioteca();
+        gestorBiblioteca.agregarLibro(libro1);
+        gestorBiblioteca.agregarLibro(libro2);
+        gestorBiblioteca.mostrarLibros();
+        System.out.println("----------------------------");
+        gestorBiblioteca.eliminarLibro(2);
+        gestorBiblioteca.mostrarLibros();
+        System.out.println("----------------------------");
+        gestorBiblioteca.agregarLibro(libro2);
+        gestorBiblioteca.buscarLibro(12);
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+
+
     }
 }

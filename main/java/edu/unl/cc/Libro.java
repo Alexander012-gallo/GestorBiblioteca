@@ -6,6 +6,13 @@ public class Libro {
     private String autor;
     private double precio;
 
+    public Libro(int id, String titulo, String autor, double precio) {
+        this.id = id;
+        this.titulo = titulo;
+        this.autor = autor;
+        this.precio = precio;
+    }
+
     public int getId() {
         return id;
     }
